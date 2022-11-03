@@ -12,7 +12,10 @@ my_packages <- c(
   "dplyr",
   "ggpubr",
   "svglite",
-  "markdown"
+  "markdown",
+  "DESeq2",
+  "apeglm",
+  "EnhancedVolcano"
   )
 
 install_if_missing = function(p) {
