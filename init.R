@@ -31,7 +31,7 @@ BiocManager::install('EnhancedVolcano')
 
 devtools::install_github('kevinblighe/EnhancedVolcano')
 
-library(EnhancedVolcano)
+library(devtools)
 
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")

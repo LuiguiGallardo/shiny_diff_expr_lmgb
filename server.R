@@ -11,6 +11,7 @@ library(dplyr)
 library(ggpubr)
 library(markdown)
 
+library(devtools)
 library(DESeq2)
 library(apeglm)
 library(EnhancedVolcano)
