@@ -13,9 +13,7 @@ my_packages <- c(
   "ggpubr",
   "svglite",
   "markdown",
-  "DESeq2",
-  "apeglm",
-  "EnhancedVolcano"
+  "devtools"
   )
 
 install_if_missing = function(p) {
