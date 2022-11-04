@@ -25,3 +25,26 @@ install_if_missing = function(p) {
 }
 
 invisible(sapply(my_packages, install_if_missing))
+
+if (!requireNamespace('BiocManager', quietly = TRUE))
+  install.packages('BiocManager')
+
+BiocManager::install('EnhancedVolcano')
+
+devtools::install_github('kevinblighe/EnhancedVolcano')
+
+library(EnhancedVolcano)
+
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("DESeq2")
+
+browseVignettes("DESeq2")
+
+BiocManager::install("apeglm")
+
+browseVignettes("apeglm")
+
+
+
