@@ -13,6 +13,7 @@ my_packages <- c(
   "ggpubr",
   "svglite",
   "markdown",
+  "pkgdown",
   "devtools"
   )
 
@@ -24,6 +25,9 @@ install_if_missing = function(p) {
 
 invisible(sapply(my_packages, install_if_missing))
 
+
+library(devtools)
+
 if (!requireNamespace('BiocManager', quietly = TRUE))
   install.packages('BiocManager')
 
@@ -31,7 +35,7 @@ BiocManager::install('EnhancedVolcano')
 
 devtools::install_github('kevinblighe/EnhancedVolcano')
 
-library(devtools)
+
 
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
