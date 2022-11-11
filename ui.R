@@ -6,7 +6,7 @@ library(shiny)
 library(shinythemes)
 library(markdown)
 
-# Define UI for application that draws a histogram
+# Define UI for the DE analysis
 fluidPage(
   theme = shinytheme("flatly"),
   navbarPage(

@@ -14,7 +14,9 @@ my_packages <- c(
   "svglite",
   "markdown",
   "pkgdown",
-  "devtools"
+  "DESeq2",
+  "apeglm",
+  "EnhancedVolcano"
   )
 
 install_if_missing = function(p) {
@@ -25,28 +27,6 @@ install_if_missing = function(p) {
 
 invisible(sapply(my_packages, install_if_missing))
 
-
-library(devtools)
-
-if (!requireNamespace('BiocManager', quietly = TRUE))
-  install.packages('BiocManager')
-
-BiocManager::install('EnhancedVolcano')
-
-devtools::install_github('kevinblighe/EnhancedVolcano')
-
-
-
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-
-BiocManager::install("DESeq2")
-
-browseVignettes("DESeq2")
-
-BiocManager::install("apeglm")
-
-browseVignettes("apeglm")
-
-
-
+BiocManager::install()
