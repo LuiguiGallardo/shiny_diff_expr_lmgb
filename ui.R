@@ -57,6 +57,7 @@ fluidPage(
                              max = 1,
                              value = 0.1,
                              step = 0.001),
+                 
                ), # Sidebar panel 2
                mainPanel(
                  tableOutput("deseq2"),
@@ -93,8 +94,15 @@ fluidPage(
                            "Plot filename (.svg)",
                            value = "volcano_plot"),
                  
+                 textInput("table_filename",
+                           "Table filename (.tsv)",
+                           value = "results"),
+                 
                  downloadButton("downloadPlot",
                                 "Download plot"),
+                 
+                 downloadButton("downloadTable",
+                                "Download results")
                  
                ), # Sidebar panel 2
                mainPanel(

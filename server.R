@@ -117,6 +117,7 @@ shinyServer(
       plot_reactive()
     }
     )
+    
     output$downloadPlot <- downloadHandler(
       filename = function() {
         paste0(input$plot_filename, ".svg")
@@ -128,6 +129,17 @@ shinyServer(
           width = 7,
           height = 7
         )
+      }
+    )
+    
+    output$downloadTable <- downloadHandler(
+      filename = function(){
+        paste0(input$table_filename, ".tsv")
+      }, 
+      content = function(file){
+        write.table(res_dif_expression_deseq_data_set,
+                    file,
+                    sep = "\t")
       }
     )
   }
